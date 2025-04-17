@@ -1,8 +1,6 @@
+import "server-only";
 import { db } from "@/app/lib/firebase";
 import stripe from "@/app/lib/stripe";
-import Email from "next-auth/providers/email";
-import { NextResponse } from "next/server";
-import "server-only";
 
 export async function getOrCreateCustomerId(userId: string, userEmail: string) {
   try {

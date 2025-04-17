@@ -18,27 +18,27 @@ export async function POST(req: NextRequest) {
   }
 
   const metadata = {
-    testeId: testeId,
+    testeId,
   };
 
   const customerId = await getOrCreateCustomerId(userId, userEmail);
   try {
     const session = await stripe.checkout.sessions.create({
-      mode: "subscription",
       line_items: [
         {
           price,
           quantity: 1,
         },
       ],
+      mode: "subscription",
       payment_method_types: ["card"],
-      success_url: `${req.headers.get("origins")}/success`,
-      cancel_url: `${req.headers.get("origins")}/`,
+      success_url: `${req.headers.get("origin")}/dashboard`,
+      cancel_url: `${req.headers.get("origin")}/`,
       metadata,
       customer: customerId,
     });
 
-    if (!session) {
+    if (!session.url) {
       return NextResponse.json("Session not found", { status: 500 });
     }
     return NextResponse.json({ sessionId: session.id });

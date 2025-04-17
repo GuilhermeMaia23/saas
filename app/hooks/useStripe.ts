@@ -20,10 +20,10 @@ export function useStripe() {
     try {
       const response = await fetch("/api/stripe/create-pay-checkout", {
         method: "POST",
-        body: JSON.stringify(checkoutData),
         headers: {
           "Content-Type": "application/json",
         },
+        body: JSON.stringify(checkoutData),
       });
 
       const data = await response.json();
@@ -39,12 +39,12 @@ export function useStripe() {
     if (!stripe) return;
 
     try {
-      const response = await fetch("/api/stripe/create-subs-checkout", {
+      const response = await fetch("/api/stripe/create-subscription-checkout", {
         method: "POST",
-        body: JSON.stringify(checkoutData),
         headers: {
           "Content-Type": "application/json",
         },
+        body: JSON.stringify(checkoutData),
       });
       const data = await response.json();
       await stripe.redirectToCheckout({
