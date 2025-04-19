@@ -31,7 +31,9 @@ export default async function Dashboard() {
         </form>
       )}
       <Link href="/pagamentos">
-        <button className="border rounded-md px-1 mt-10">Pagamentos</button>
+        <button className="border rounded-md px-1 mt-10">
+          Realize seu Pagamento.
+        </button>
       </Link>
     </div>
   );

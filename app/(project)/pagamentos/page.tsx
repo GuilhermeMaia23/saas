@@ -20,7 +20,7 @@ export default function Pagamentos() {
           })
         }
       >
-        Criar Pagamento Stripe
+        Realize seu Pagamento
       </button>
       <button
         className="border rounded-md px-1 mb-2.5"
@@ -30,13 +30,13 @@ export default function Pagamentos() {
           })
         }
       >
-        Criar Portal de Pagamentos
+        Crie sua Assinatura
       </button>
       <button
         className="border rounded-md px-1 mb-2.5"
         onClick={handleCreateStripePortal}
       >
-        Criar Portal de Assinatura
+        Gerencie Sua Assinatura
       </button>
     </div>
   );
