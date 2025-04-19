@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SaaS Starter com Next.js
 
-## Getting Started
+Este projeto é um ponto de partida para aplicações SaaS modernas, construído com [Next.js](https://nextjs.org/).  
+Ele utiliza o sistema de roteamento de diretórios `app/` e está configurado para desenvolvimento local imediato.
 
-First, run the development server:
+## 🚀 Tecnologias Utilizadas
+
+- [Next.js](https://nextjs.org/) com diretório `app/`
+- TypeScript
+- [Geist](https://vercel.com/font) via `next/font`
+- ESLint e PostCSS configurados
+
+## 📦 Instalação
+
+Clone o repositório e instale as dependências:
+
+```bash
+git clone https://github.com/GuilhermeMaia23/saas.git
+cd saas
+npm install
+```
+
+## 🧪 Executando em Desenvolvimento
+
+Inicie o servidor de desenvolvimento com:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000) para visualizar o projeto em execução.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Estrutura do Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+saas/
+├── app/
+│   └── page.tsx
+├── public/
+├── styles/
+├── eslint.config.mjs
+├── next.config.ts
+├── tsconfig.json
+├── postcss.config.mjs
+├── package.json
+└── README.md
+```
 
-## Learn More
+## 📚 Recursos Adicionais
 
-To learn more about Next.js, take a look at the following resources:
+- [Documentação do Next.js](https://nextjs.org/docs)
+- [Tutorial Interativo do Next.js](https://nextjs.org/learn)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🤝 Contribuições
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Sinta-se à vontade para abrir issues ou enviar pull requests. Toda contribuição é bem-vinda!
 
-## Deploy on Vercel
+## 📄 Licença
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este projeto está licenciado sob a [MIT License](LICENSE).
